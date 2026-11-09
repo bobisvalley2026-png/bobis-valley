@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Bobi's Valley – Il gioco delle bacche e dei Bobis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Bobi's Valley: crea il tuo personaggio, raccogli bacche e legna, vendi al Mercante e colleziona tutti i Bobis. Gioca subito dal browser.">
+    <meta name="theme-color" content="#3f8f2a">
+
+    <!-- Font: Lilita One per i titoli, Nunito per i testi -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styleBobisValley1.css">
+    <script src="scriptBobisValley1.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+
+    <!-- ============ HEADER + NAVBAR ============ -->
+    <header class="site-header glass" id="top">
+        <div class="header-inner">
+            <a class="brand" href="bobisValley1.html" aria-label="Bobi's Valley, torna alla home">
+                <span class="brand-berry" aria-hidden="true">🫐</span>
+                <span class="brand-name">Bobi's Valley</span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Apri il menu"><span></span><span></span><span></span></button>
+            <nav class="navbar" id="menu" aria-label="Navigazione principale">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="about.html" data-soon>About</a>
+                <a href="bugReporting.html" data-soon>Bug Reporting</a>
+                <a href="download.html" data-soon>Download</a>
+                <div class="has-sub">
+                    <a href="socialMedia.html">Social Media</a>
+                    <button class="sub-toggle" type="button" aria-expanded="false" aria-label="Mostra i social">▾</button>
+                    <ul class="submenu glass">
+                        <li><a href="https://www.instagram.com/bobisvalley/" target="_blank" rel="noopener">📸 Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/@mzcode01/video/7599655904337972498" data-soon target="_blank" rel="noopener">🎵 TikTok</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenuto">
+
+        <!-- ============ HERO ============ -->
+        <section class="hero" aria-labelledby="titolo-hero">
+            <!-- bacche che fluttuano (decorative) -->
+            <span class="berry b1" aria-hidden="true">🫐</span>
+            <span class="berry b2" aria-hidden="true">🫐</span>
+            <span class="berry b3" aria-hidden="true">🫐</span>
+            <span class="berry b4" aria-hidden="true">🍃</span>
+
+            <div class="hero-inner">
+                <!-- Il logo contiene già il nome: l'h1 resta per motori di ricerca e screen reader -->
+                <h1 id="titolo-hero" class="sr-only">Bobi's Valley</h1>
+                <img class="hero-logo" src="processed_sfondo.png" width="568" height="310"
+                     alt="Logo di Bobi's Valley: la Pentola, il Brie e la bottiglia di vino sotto l'insegna di legno">
+                <p class="badge">Versione 1.5 · ancora in sviluppo</p>
+                <p class="lead">Una valle tranquilla, bacche da raccogliere e tanti piccoli Bobis da conoscere. Crea il tuo personaggio e inizia a giocare subito dal browser.</p>
+                <div class="cta-row center">
+                    <a class="btn btn-primary" href="https://bobisvalleyyy.netlify.app/" target="_blank" rel="noopener">Gioca ora</a>
+                    <a class="btn btn-ghost" href="#bobis">Conosci i Bobis</a>
+                </div>
+            </div>
+
+            <!-- colline in primo piano -->
+            <svg class="hills" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+                <path class="hill-back"  d="M0,120 C240,40 420,40 640,100 C860,160 1100,40 1440,90 L1440,220 L0,220 Z"/>
+                <path class="hill-front" d="M0,170 C260,110 520,110 760,160 C1000,210 1200,130 1440,160 L1440,220 L0,220 Z"/>
+            </svg>
+        </section>
+
+        <!-- ============ IL GIOCO ============ -->
+        <section class="section" id="gioco" aria-labelledby="titolo-gioco">
+            <div class="container">
+                <div class="principle reveal">
+                    <h2 id="titolo-gioco">titolo</h2>
+                    <p>descrizione...</p>
+                    <p>presentazione...</p>
+                </div>
+
+                <aside class="card reveal" aria-label="Controlli di gioco">
+                    <h3>Come si gioca</h3>
+                    <ul class="card-list">
+                        <li><span aria-hidden="true">👆</span> <b>Salta:</b> clicca al momento giusto</li>
+                        <li><span aria-hidden="true">↻</span> <b>Ruota:</b> tasto R</li>
+                        <li><span aria-hidden="true">💨</span> <b>Scatta:</b> per muoverti più veloce</li>
+                        <li><span aria-hidden="true">💾</span> <b>Salva:</b> il tuo progresso resta nel gioco</li>
+                        <li><span aria-hidden="true">💾</span> <b>X:</b> xxx</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ============ PERSONALIZZAZIONE ============ -->
+        <section class="section pers" id="personalizza" aria-labelledby="titolo-pers">
+            <div class="container narrow split">
+                <figure class="shot glass reveal">
+                    <img src="personalizzazione.png" width="829" height="818" alt="Schermata di personalizzazione: anteprima del personaggio, colori, disegno sulla maglia e acconciature" onerror="this.parentNode.classList.add('empty')">
+                    <figcaption>Il personalizzatore del personaggio</figcaption>
+                    <span class="spark s1" aria-hidden="true">✨</span><span class="spark s2" aria-hidden="true">🎨</span>
+                </figure>
+                <div class="reveal">
+                    <h2 id="titolo-pers">Rendi tuo il personaggio</h2>
+                    <p>Prima di entrare nella valle crei il tuo personaggio e lo fai diventare unico, con un&rsquo;anteprima che puoi ruotare.</p>
+                    <ul class="feat-list">
+                        <li><span aria-hidden="true">🎲</span> <span><b>Stile rapido:</b> femminile, maschile o casuale.</span></li>
+                        <li><span aria-hidden="true">🎨</span> <span><b>Colori ovunque,</b> con ruota e luminosità.</span></li>
+                        <li><span aria-hidden="true">✏️</span> <span><b>Disegna sulla maglia</b> con pennelli e gomma.</span></li>
+                        <li><span aria-hidden="true">✂️</span> <span><b>Capelli</b> per lei e per lui, dal caschetto ai ricci.</span></li>
+                        <li><span aria-hidden="true">🎭</span> <span><b>Anteprima animata:</b> camminata, corsa, salto, saluto, pesca&hellip;</span></li>
+                    </ul>
+                    <ul class="swatches" aria-label="Cosa puoi colorare"><li><i style="--s:#ffd1b8"></i>Pelle</li><li><i style="--s:#5b9b52"></i>Occhi</li><li><i style="--s:#6b4226"></i>Capelli</li><li><i style="--s:#bd8be6"></i>Maglia</li><li><i style="--s:#9a6fe0"></i>Pantaloni</li><li><i style="--s:#ff6b7a"></i>Scarpe</li><li><i style="--s:#9aa0a8"></i>Cappello</li><li><i style="--s:#ff7fb0"></i>Fiocchi</li><li><i style="--s:#8c5a30"></i>Borsa</li></ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ OPEN WORLD ============ -->
+        <section class="section world" id="open-world" aria-labelledby="titolo-world">
+            <span class="sun" aria-hidden="true"></span>
+            <span class="cloud c1" aria-hidden="true"></span><span class="cloud c2" aria-hidden="true"></span><span class="cloud c3" aria-hidden="true"></span>
+            <div class="container narrow">
+                <div class="world-card glass reveal">
+                    <h2 id="titolo-world">Open world: la valle è tutta tua</h2>
+                    <p>Niente percorsi obbligati: ti muovi liberamente per la valle, raccogli bacche e legna, vendi al Mercante e costruisci come preferisci. Case extra e negozio si possono spostare o rimuovere quando vuoi.</p>
+                    <ul class="chips">
+                        <li>🧭 Esplora dove vuoi</li><li>🫐 Raccogli bacche e legna</li><li>🛶 Vendi al Mercante</li><li>🏡 Costruisci e sposta</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="scene" aria-hidden="true">
+                <svg viewBox="0 0 1440 220" preserveAspectRatio="none">
+                    <path class="hill-back"  d="M0,120 C240,40 420,40 640,100 C860,160 1100,40 1440,90 L1440,220 L0,220 Z"/>
+                    <path class="hill-front" d="M0,170 C260,110 520,110 760,160 C1000,210 1200,130 1440,160 L1440,220 L0,220 Z"/>
+                </svg>
+                <span class="prop p1">🌳</span><span class="prop p2">🏡</span><span class="prop p3">🫐</span><span class="prop p4">🌳</span><span class="prop p5">🪵</span>
+            </div>
+        </section>
+
+        <!-- ============ I BOBIS (carosello) ============ -->
+        <section class="section section-wood bobis-sec" id="bobis" aria-labelledby="titolo-bobis">
+            <div class="aura" aria-hidden="true"></div>
+            <div class="container narrow">
+                <h2 id="titolo-bobis">Conosci i Bobis</h2>
+                <p class="section-lead">testo</p>
+            </div>
+
+            <div class="carousel" id="carousel" role="region" aria-roledescription="carosello" aria-label="I Bobis">
+                <div class="stage" id="stage" tabindex="0" aria-label="Trascina o usa le frecce per scorrere i Bobis"></div>
+                <div class="car-ui">
+                    <button class="car-btn glass" id="prev" type="button" aria-label="Bobi precedente">‹</button>
+                    <div class="dots" id="dots"></div>
+                    <button class="car-btn glass" id="next" type="button" aria-label="Bobi successivo">›</button>
+                </div>
+                <p class="sr-only" id="live" aria-live="polite"></p>
+            </div>
+        </section>
+
+        <!-- ============ COSA C'È NELLA v0.5 ============ -->
+        <section class="section" id="novita" aria-labelledby="titolo-novita">
+            <div class="container narrow">
+                <h2 id="titolo-novita">Cosa puoi fare (Still in development)</h2>
+
+                <div class="bento">
+                    <article class="tile tile-big reveal">
+                        <span class="tile-ico ico-book" aria-hidden="true"><i>📖</i></span>
+                        <h3>Il Diario dei Bobis</h3>
+                        <p>Ogni Bobi che incontri finisce nel diario. Al livello giusto puoi scegliere il tuo primo Bobi e iniziare la collezione.</p>
+                    </article>
+
+                    <article class="tile reveal">
+                        <span class="tile-ico ico-berry" aria-hidden="true"><i>🫐</i></span>
+                        <h3>Bacche</h3>
+                        <p>Raccoglile in giro per la valle.</p>
+                    </article>
+
+                    <article class="tile reveal">
+                        <span class="tile-ico ico-wood" aria-hidden="true"><i>🪵</i></span>
+                        <h3>Legna</h3>
+                        <p>Una risorsa in più da raccogliere.</p>
+                    </article>
+
+                    <article class="tile tile-wine reveal">
+                        <span class="tile-ico ico-boat" aria-hidden="true"><i>🛶</i></span>
+                        <h3>Il Mercante</h3>
+                        <p>Vende tutte le bacche con un solo tocco e ti paga in euro.</p>
+                    </article>
+
+                    <article class="tile reveal">
+                        <span class="tile-ico ico-music" aria-hidden="true"><i>🎵</i></span>
+                        <h3>Musica e volume</h3>
+                        <p>Regola tutto dalle impostazioni.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CTA FINALE ============ -->
+        <section class="section cta-final" aria-labelledby="titolo-cta">
+            <div class="container narrow cta-box reveal">
+                <h2 id="titolo-cta">La valle ti aspetta</h2>
+                <p>Non serve installare niente: apri il gioco e crea il tuo personaggio.</p>
+                <div class="cta-row center">
+                    <a class="btn btn-primary" href="https://stellar-starship-3b36fa.netlify.app/" target="_blank" rel="noopener">Gioca ora</a>
+                    <a class="btn btn-ghost-dark" href="bugReporting.html" data-soon>Segnala un bug</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+        <p>&copy; <span id="anno">2026</span> Bobi's Valley</p>
+        <p>Gianluca \ Vanessa</p>
+        <p><a href="#" data-soon>Privacy</a> | <a href="#" data-soon>Contatti</a> | <a href="https://www.instagram.com/bobisvalley/" target="_blank" rel="noopener">Instagram</a> | <a href="https://www.tiktok.com/@mzcode01/video/7599655904337972498" data-soon target="_blank" rel="noopener">TikTok</a></p>
+    </footer>
+
+</body>
+</html>
