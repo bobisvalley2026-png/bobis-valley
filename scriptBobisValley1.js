@@ -241,4 +241,17 @@
     /* ---------- 5. Anno ---------- */
     var anno = $('#anno');
     if (anno) anno.textContent = new Date().getFullYear();
+
+    /* ---------- 6. Connessione al server Multiplayer (Render) ---------- */
+    
+    const socket = io('https://bobisvalley-server.onrender.com'); 
+
+    socket.on('connect', () => {
+        console.log('✅ Connesso al server multiplayer di Bobi\'s Valley!');
+    });
+
+    socket.on('disconnect', () => {
+        console.log('❌ Disconnesso dal server multiplayer.');
+    });
+
 })();
